@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booklet - Confirm Deletion</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/form.css"> <!-- Reusing form styles for the container -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">Booklet</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="management.html">Book Management</a></li>
+                </ul>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="book-form" style="text-align: center;">
+                <h1>Confirm Deletion</h1>
+                <p>Are you sure you want to delete the book "<strong>The Midnight Library</strong>"?</p>
+                <p style="margin-bottom: 2rem;">This action cannot be undone.</p>
+                <div class="form-actions" style="justify-content: center;">
+                    <a href="management.html" class="btn btn-secondary">Cancel</a>
+                    <a href="management.html" class="btn btn-danger" style="background-color: #e74c3c;">Confirm Delete</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Booklet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

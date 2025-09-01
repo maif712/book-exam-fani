@@ -41,6 +41,10 @@
                     <h3>Oldest Book</h3>
                     <p>Sapiens (2015)</p>
                 </div>
+                <div class="stat-card">
+                    <h3>Longest Book</h3>
+                    <p>Project Hail Mary (496 pgs)</p>
+                </div>
             </section>
 
             <section class="book-list">
@@ -50,8 +54,7 @@
                             <th>Title</th>
                             <th>Author</th>
                             <th>Category</th>
-                            <th>Published</th>
-                            <th>Pages</th>
+                            <th>Price</th>
                             <th>Rating</th>
                             <th>Actions</th>
                         </tr>
@@ -61,39 +64,36 @@
                             <td data-label="Title">The Midnight Library</td>
                             <td data-label="Author">Matt Haig</td>
                             <td data-label="Category">Fiction</td>
-                            <td data-label="Published">2020-09-13</td>
-                            <td data-label="Pages">304</td>
+                            <td data-label="Price">$14.99</td>
                             <td data-label="Rating">4/5</td>
                             <td data-label="Actions">
-                                <a href="#" class="btn-action">Details</a>
+                                <a href="details.html" class="btn-action">Details</a>
                                 <a href="edit.html" class="btn-action">Edit</a>
-                                <button class="btn-action btn-delete">Delete</button>
+                                <a href="delete.html" class="btn-action btn-delete">Delete</a>
                             </td>
                         </tr>
                          <tr>
                             <td data-label="Title">Project Hail Mary</td>
                             <td data-label="Author">Andy Weir</td>
                             <td data-label="Category">Sci-Fi</td>
-                            <td data-label="Published">2021-05-04</td>
-                            <td data-label="Pages">496</td>
+                            <td data-label="Price">$18.99</td>
                             <td data-label="Rating">5/5</td>
                             <td data-label="Actions">
-                                <a href="#" class="btn-action">Details</a>
+                                <a href="details.html" class="btn-action">Details</a>
                                 <a href="edit.html" class="btn-action">Edit</a>
-                                <button class="btn-action btn-delete">Delete</button>
+                                <a href="delete.html" class="btn-action btn-delete">Delete</a>
                             </td>
                         </tr>
                         <tr>
                             <td data-label="Title">Sapiens</td>
                             <td data-label="Author">Yuval Noah Harari</td>
                             <td data-label="Category">Non-Fiction</td>
-                            <td data-label="Published">2015-02-10</td>
-                            <td data-label="Pages">464</td>
+                            <td data-label="Price">$22.00</td>
                             <td data-label="Rating">5/5</td>
                             <td data-label="Actions">
-                                <a href="#" class="btn-action">Details</a>
+                                <a href="details.html" class="btn-action">Details</a>
                                 <a href="edit.html" class="btn-action">Edit</a>
-                                <button class="btn-action btn-delete">Delete</button>
+                                <a href="delete.html" class="btn-action btn-delete">Delete</a>
                             </td>
                         </tr>
                     </tbody>
@@ -101,17 +101,6 @@
             </section>
         </div>
     </main>
-
-    <div id="deleteModal" class="modal">
-        <div class="modal-content">
-            <h2>Confirm Deletion</h2>
-            <p>Are you sure you want to delete "<span id="bookTitleToDelete"></span>"?</p>
-            <div class="modal-actions">
-                <button id="cancelDelete" class="btn">Cancel</button>
-                <button id="confirmDelete" class="btn btn-danger">Delete</button>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="container">

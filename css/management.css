@@ -4,31 +4,43 @@
     align-items: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .stats {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .stat-card {
     background-color: var(--card-bg);
-    padding: 1rem;
-    border-radius: 8px;
-    flex-grow: 1;
+    padding: 1.5rem;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .stat-card h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 .stat-card p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     color: var(--heading-color);
+}
+
+.book-list {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .book-table {
@@ -38,39 +50,47 @@
 
 .book-table th,
 .book-table td {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
 }
 
+.book-table tr:last-child td {
+    border-bottom: none;
+}
+
 .book-table thead {
-    background-color: var(--card-bg);
+    border-bottom: 2px solid var(--border-color);
 }
 
 .book-table th {
-    color: var(--heading-color);
+    color: var(--text-color);
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .btn-action {
-    background: none;
-    border: none;
     color: var(--accent-color);
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 0.9rem;
-    margin-right: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.2s ease;
 }
 
 .btn-action:hover {
-    color: var(--secondary-color);
+    color: var(--hover-color);
+    text-decoration: underline;
 }
 
 .btn-delete {
-    color: #ff6b6b;
+    color: #e74c3c;
 }
+.btn-delete:hover {
+    color: #c0392b;
+}
+
 
 /* Responsive Table */
 @media (max-width: 768px) {
@@ -90,61 +110,34 @@
         margin-bottom: 1rem;
         border: 1px solid var(--border-color);
         border-radius: 8px;
+        padding: 0.5rem;
+    }
+
+    .book-table tr:last-child {
+        margin-bottom: 0;
     }
 
     .book-table td {
         text-align: right;
         padding-left: 50%;
         position: relative;
-        border-bottom: 0;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.75rem;
+    }
+
+    .book-table tr td:last-child {
+        border-bottom: none;
     }
 
     .book-table td::before {
         content: attr(data-label);
         position: absolute;
-        left: 1rem;
-        width: calc(50% - 2rem);
+        left: 0.75rem;
+        width: calc(50% - 1.5rem);
         padding-right: 10px;
         white-space: nowrap;
         text-align: left;
         font-weight: bold;
         color: var(--heading-color);
     }
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 20;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-    background-color: var(--card-bg);
-    margin: 15% auto;
-    padding: 2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center;
-}
-
-.modal-actions {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.btn-danger {
-    background-color: #ff6b6b;
-    color: var(--primary-color);
-    border-color: #ff6b6b;
 }
