@@ -35,16 +35,19 @@
     position: absolute;
     z-index: 0;
     inset: -200%; /* Make it huge */
-    background: conic-gradient(from 0deg, #667eea, #764ba2, #667eea);
     animation: rotate 4s linear infinite;
 }
 
+.stat-card-1::before {
+    background: conic-gradient(from 0deg, transparent 0% 75%, #667eea 85%, #764ba2 95%, transparent 100%);
+}
+
 .stat-card-2::before {
-    background: conic-gradient(from 0deg, #2af598, #009efd, #2af598);
+    background: conic-gradient(from 0deg, transparent 0% 75%, #2af598 85%, #009efd 95%, transparent 100%);
 }
 
 .stat-card-3::before {
-    background: conic-gradient(from 0deg, #ff7e5f, #feb47b, #ff7e5f);
+    background: conic-gradient(from 0deg, transparent 0% 75%, #ff7e5f 85%, #feb47b 95%, transparent 100%);
 }
 
 .stat-card-inner {
@@ -56,6 +59,7 @@
     background-color: var(--card-bg);
     position: relative;
     z-index: 1;
+    height: 100%;
 }
 
 .stat-icon {
