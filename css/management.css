@@ -7,21 +7,58 @@
     gap: 1rem;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2.5rem;
 }
 
 .stat-card {
+    position: relative;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 12px;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, #667eea, #764ba2, #667eea);
+    animation: rotate 4s linear infinite;
+}
+
+.stat-card-2::before {
+    background: conic-gradient(from 0deg, #2af598, #009efd, #2af598);
+}
+
+.stat-card-3::before {
+    background: conic-gradient(from 0deg, #ff7e5f, #feb47b, #ff7e5f);
+}
+
+.stat-card-inner {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
-    border-radius: 12px;
-    border: none;
-    color: #fff;
+    border-radius: 10px; /* Slightly smaller than parent to show border */
+    background-color: var(--card-bg);
+    position: relative;
+    z-index: 1;
 }
 
 .stat-icon {
@@ -32,7 +69,13 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    color: #fff;
 }
+
+.stat-card-1 .stat-icon { background-color: #764ba2; }
+.stat-card-2 .stat-icon { background-color: #009efd; }
+.stat-card-3 .stat-icon { background-color: #ff7e5f; }
+
 
 .stat-icon svg {
     width: 24px;
@@ -43,35 +86,14 @@
     font-size: 0.9rem;
     margin-bottom: 0.25rem;
     font-weight: 500;
-    opacity: 0.9;
+    color: var(--text-color);
 }
 
 .stat-info p {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
-}
-
-/* Card Specific Colors */
-.stat-card-1 {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-.stat-card-1 .stat-icon {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.stat-card-2 {
-    background: linear-gradient(135deg, #2af598 0%, #009efd 100%);
-}
-.stat-card-2 .stat-icon {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.stat-card-3 {
-    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
-}
-.stat-card-3 .stat-icon {
-    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--heading-color);
 }
 
 .book-list {
