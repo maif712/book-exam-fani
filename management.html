@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booklet - Book Management</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/management.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">Booklet</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="management.html" class="active">Book Management</a></li>
+                </ul>
+                 <button class="mobile-nav-toggle" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="management-header">
+                <h1>Book Management</h1>
+                <a href="create.html" class="btn btn-primary">Create New Book</a>
+            </div>
+
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Books</h3>
+                    <p>6</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Oldest Book</h3>
+                    <p>Sapiens (2015)</p>
+                </div>
+            </section>
+
+            <section class="book-list">
+                <table class="book-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Published</th>
+                            <th>Pages</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Title">The Midnight Library</td>
+                            <td data-label="Author">Matt Haig</td>
+                            <td data-label="Category">Fiction</td>
+                            <td data-label="Published">2020-09-13</td>
+                            <td data-label="Pages">304</td>
+                            <td data-label="Rating">4/5</td>
+                            <td data-label="Actions">
+                                <a href="#" class="btn-action">Details</a>
+                                <a href="edit.html" class="btn-action">Edit</a>
+                                <button class="btn-action btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td data-label="Title">Project Hail Mary</td>
+                            <td data-label="Author">Andy Weir</td>
+                            <td data-label="Category">Sci-Fi</td>
+                            <td data-label="Published">2021-05-04</td>
+                            <td data-label="Pages">496</td>
+                            <td data-label="Rating">5/5</td>
+                            <td data-label="Actions">
+                                <a href="#" class="btn-action">Details</a>
+                                <a href="edit.html" class="btn-action">Edit</a>
+                                <button class="btn-action btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Title">Sapiens</td>
+                            <td data-label="Author">Yuval Noah Harari</td>
+                            <td data-label="Category">Non-Fiction</td>
+                            <td data-label="Published">2015-02-10</td>
+                            <td data-label="Pages">464</td>
+                            <td data-label="Rating">5/5</td>
+                            <td data-label="Actions">
+                                <a href="#" class="btn-action">Details</a>
+                                <a href="edit.html" class="btn-action">Edit</a>
+                                <button class="btn-action btn-delete">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete "<span id="bookTitleToDelete"></span>"?</p>
+            <div class="modal-actions">
+                <button id="cancelDelete" class="btn">Cancel</button>
+                <button id="confirmDelete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Booklet. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
