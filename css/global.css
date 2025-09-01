@@ -198,7 +198,7 @@ footer {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: flex;
         flex-direction: column;
         width: 100%;
         position: absolute;
@@ -206,10 +206,18 @@ footer {
         left: 0;
         background-color: var(--primary-color);
         border-top: 1px solid var(--border-color);
+
+        /* Animation properties */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
     }
 
     .nav-links.active {
-        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     .nav-links a.active::before {
