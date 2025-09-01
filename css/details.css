@@ -68,21 +68,32 @@
 }
 
 .stat {
-    font-size: 1rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
 }
 
-.stat strong {
+.stat svg {
+    width: 24px;
+    height: 24px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+.stat-text strong {
     display: block;
     color: var(--text-color);
     font-weight: 500;
-    margin-bottom: 0.25rem;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
+    margin-bottom: 0.1rem;
 }
 
-.stat span {
+.stat-text span {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--heading-color);
 }
 
