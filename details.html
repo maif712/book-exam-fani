@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booklet - Book Details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/details.css">
 </head>
@@ -28,32 +33,30 @@
     <main>
         <div class="container">
             <div class="book-details-container">
-                <div class="book-cover-placeholder">
-                    <span>Book Cover</span>
-                </div>
-                <div class="book-info">
+                <div class="details-header">
                     <h1 class="book-title">The Midnight Library</h1>
                     <p class="book-author">by Matt Haig</p>
-                    <p class="book-price">$14.99</p>
+                </div>
 
-                    <div class="book-meta">
-                        <span class="book-category">Fiction</span>
-                        <span class="book-rating">4/5 Rating</span>
-                    </div>
+                <p class="book-price">$14.99</p>
 
-                    <div class="book-stats">
-                        <div class="stat">
-                            <strong>Published:</strong> 2020-09-13
-                        </div>
-                        <div class="stat">
-                            <strong>Pages:</strong> 304
-                        </div>
-                    </div>
+                <div class="book-meta">
+                    <span class="book-category">Fiction</span>
+                    <span class="book-rating">4/5 Rating</span>
+                </div>
 
-                    <div class="book-actions">
-                        <a href="management.html" class="btn btn-secondary">Back to Management</a>
-                        <a href="edit.html" class="btn">Edit Book</a>
+                <div class="book-stats">
+                    <div class="stat">
+                        <strong>Published:</strong> <span>2020-09-13</span>
                     </div>
+                    <div class="stat">
+                        <strong>Pages:</strong> <span>304</span>
+                    </div>
+                </div>
+
+                <div class="book-actions">
+                    <a href="management.html" class="btn btn-secondary">Back to Management</a>
+                    <a href="edit.html" class="btn">Edit Book</a>
                 </div>
             </div>
         </div>

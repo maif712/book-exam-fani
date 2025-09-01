@@ -59,6 +59,10 @@
     border-bottom: none;
 }
 
+.book-table tbody tr:hover {
+    background-color: var(--secondary-color);
+}
+
 .book-table thead {
     border-bottom: 2px solid var(--border-color);
 }
@@ -89,6 +93,12 @@
 }
 .btn-delete:hover {
     color: #c0392b;
+}
+
+.actions-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 

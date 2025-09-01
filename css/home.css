@@ -22,13 +22,23 @@
 
 .book-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 20px var(--shadow-color);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+}
+
+a.book-link-wrapper {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.book-link-wrapper:hover .book-title {
+    color: var(--accent-color);
 }
 
 .book-title {
     font-size: 1.25rem;
     color: var(--heading-color);
     margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
 }
 
 .book-author {
@@ -66,13 +76,16 @@
 }
 
 .book-rating {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
 }
 
 .book-price {
     font-size: 1.25rem;
     font-weight: bold;
-    color: var(--accent-color);
+    color: var(--heading-color);
 }
